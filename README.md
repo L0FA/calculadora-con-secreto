@@ -1,6 +1,6 @@
 # 🔢 Calculadora Secreta con Chat Privado
 
-Una calculadora con múltiples diseños que oculta un chat privado seguro. Cuando alguien ingresa el código secreto **21092025** y presiona **=**, se desbloquea acceso a un chat privado sin registro que se autodestruye tras 30 minutos de inactividad.
+Una calculadora con múltiples diseños que oculta un chat privado seguro.
 
 ## 🚀 Inicio Rápido
 
@@ -21,30 +21,6 @@ node server.js
 - **Modo básico y científico**: Funciones trigonométricas, logaritmos, constantes, etc.
 - **Responsive**: Se adapta a cualquier pantalla
 - **Soporte de teclado**: Números, operadores, Enter, Escape, Backspace
-
-### 🔐 Cómo Activar el Chat Secreto
-
-1. Abrí la calculadora
-2. Escribí el código: **21092025**
-3. Presioná el botón **=** (igual)
-4. ¡Se abrirá el panel secreto con QR e hipervínculo!
-
-### Opciones de Acceso al Chat
-
-#### 📱 Para Móvil/Tablet
-- Escaneá el código QR con la cámara
-- Se abre directamente el chat
-
-#### 💻 Para PC/Desktop
-- Clickeá el hipervínculo **"🔗 Abrir Chat Privado"**
-- O copiá el link y compartilo
-
-### Chat Privado
-- **Sin registro**: No se guardan datos
-- **Archivos multimedia**: Envía fotos, PDFs, documentos
-- **Cámara integrada**: Tomá fotos directamente
-- **Autodestrucción**: Se cierra tras 30 min sin actividad
-- **Timer visible**: Muestra tiempo restante
 
 ## 📁 Estructura
 
@@ -103,14 +79,6 @@ calculadora-secreta/
 - `e`: Euler (2.71828...)
 - `(` `)`: Paréntesis
 
-## 🔒 Seguridad del Chat
-
-- **Sin persistencia**: Los mensajes solo existen en memoria durante la sesión
-- **Sin base de datos**: No se almacena nada
-- **WebRTC P2P**: Comunicación directa entre pares (cuando hay conexión)
-- **Timer de autodestrucción**: 30 minutos sin actividad = cierre automático
-- **Sin logs**: Todo se borra al cerrar
-
 ## 📱 Responsive
 
 La calculadora está optimizada para:
@@ -127,9 +95,6 @@ La calculadora está optimizada para:
 - WebRTC (comunicación P2P)
 - QRCode.js (generación de códigos QR)
 
-## 🇦🇷 Localización
-
-La interfaz está en español argentino (che 😉).
 
 ---
 
