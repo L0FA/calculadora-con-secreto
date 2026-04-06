@@ -133,4 +133,4 @@ La interfaz está en español argentino (che 😉).
 
 ---
 
-**Nota**: Este proyecto es para fines educativos y de demostración. Para un chat real P2P necesitarías un servidor de señalización (WebSocket) para conectar los pares inicialmente.
+**Nota**: Este proyecto es para fines educativos y de demostración. Para un chat real P2P necesitarías un servidor de señalización (WebSocket) para conectar los pares inicialmente.# calculadora-con-secreto
