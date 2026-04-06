@@ -230,6 +230,6 @@ setInterval(() => {
 
 // ==================== START ====================
 
-server.listen(PORT, HOST, () => {
+server.listen(PORT, () => {
     console.log(`🚀 Servidor activo en puerto ${PORT}`);
 });
