@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Calculadora Pro</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes.css">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- 🔥 QRCode (IMPORTANTE - antes que tus scripts) -->
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+
+    <!-- ⚙️ Config primero -->
+    <script src="js/config.js" defer></script>
+
+    <!-- 🧠 Lógica -->
+    <script src="js/calculator.js" defer></script>
+    <script src="js/chat.js" defer></script>
 </head>
+
 <body>
-    <!-- Pantalla de carga -->
+    <!-- Loader -->
     <div id="loader" class="loader">
         <div class="loader-content">
             <div class="calc-icon">🔢</div>
@@ -18,22 +32,23 @@
         </div>
     </div>
 
-    <!-- Calculadora Principal -->
+    <!-- Calculadora -->
     <div id="calculator" class="calculator theme-default">
-        <!-- Selector de temas -->
+
+        <!-- Temas -->
         <div class="theme-selector">
-            <button class="theme-btn" data-theme="default" title="Clásico">🎨</button>
-            <button class="theme-btn" data-theme="dark" title="Oscuro">🌙</button>
-            <button class="theme-btn" data-theme="neon" title="Neón">💫</button>
-            <button class="theme-btn" data-theme="minimal" title="Minimalista">⬜</button>
-            <button class="theme-btn" data-theme="retro" title="Retro">📺</button>
-            <button class="theme-btn" data-theme="nature" title="Naturaleza">🌿</button>
-            <button class="theme-btn" data-theme="ocean" title="Océano">🌊</button>
-            <button class="theme-btn" data-theme="sunset" title="Atardecer">🌅</button>
-            <button class="theme-btn" data-theme="galaxy" title="Galaxia">🌌</button>
-            <button class="theme-btn" data-theme="cyberpunk" title="Cyberpunk">🤖</button>
-            <button class="theme-btn" data-theme="pastel" title="Pastel">🍬</button>
-            <button class="theme-btn" data-theme="glass" title="Cristal">💎</button>
+            <button class="theme-btn" data-theme="default">🎨</button>
+            <button class="theme-btn" data-theme="dark">🌙</button>
+            <button class="theme-btn" data-theme="neon">💫</button>
+            <button class="theme-btn" data-theme="minimal">⬜</button>
+            <button class="theme-btn" data-theme="retro">📺</button>
+            <button class="theme-btn" data-theme="nature">🌿</button>
+            <button class="theme-btn" data-theme="ocean">🌊</button>
+            <button class="theme-btn" data-theme="sunset">🌅</button>
+            <button class="theme-btn" data-theme="galaxy">🌌</button>
+            <button class="theme-btn" data-theme="cyberpunk">🤖</button>
+            <button class="theme-btn" data-theme="pastel">🍬</button>
+            <button class="theme-btn" data-theme="glass">💎</button>
         </div>
 
         <!-- Display -->
@@ -46,7 +61,7 @@
             </div>
         </div>
 
-        <!-- Teclado básico -->
+        <!-- Teclado -->
         <div id="basic-keypad" class="keypad">
             <div class="key-row">
                 <button class="key key-function" data-action="clear">AC</button>
@@ -54,24 +69,28 @@
                 <button class="key key-function" data-action="percent">%</button>
                 <button class="key key-operator" data-action="operator" data-value="/">÷</button>
             </div>
+
             <div class="key-row">
                 <button class="key key-number" data-action="number" data-value="7">7</button>
                 <button class="key key-number" data-action="number" data-value="8">8</button>
                 <button class="key key-number" data-action="number" data-value="9">9</button>
                 <button class="key key-operator" data-action="operator" data-value="*">×</button>
             </div>
+
             <div class="key-row">
                 <button class="key key-number" data-action="number" data-value="4">4</button>
                 <button class="key key-number" data-action="number" data-value="5">5</button>
                 <button class="key key-number" data-action="number" data-value="6">6</button>
                 <button class="key key-operator" data-action="operator" data-value="-">−</button>
             </div>
+
             <div class="key-row">
                 <button class="key key-number" data-action="number" data-value="1">1</button>
                 <button class="key key-number" data-action="number" data-value="2">2</button>
                 <button class="key key-number" data-action="number" data-value="3">3</button>
                 <button class="key key-operator" data-action="operator" data-value="+">+</button>
             </div>
+
             <div class="key-row">
                 <button class="key key-number" data-action="negate">±</button>
                 <button class="key key-number" data-action="number" data-value="0">0</button>
@@ -80,114 +99,51 @@
             </div>
         </div>
 
-        <!-- Teclado científico (oculto por defecto) -->
-        <div id="scientific-keypad" class="keypad scientific hidden">
-            <div class="sci-row">
-                <button class="key key-sci" data-action="function" data-value="sin">sin</button>
-                <button class="key key-sci" data-action="function" data-value="cos">cos</button>
-                <button class="key key-sci" data-action="function" data-value="tan">tan</button>
-                <button class="key key-sci" data-action="function" data-value="log">log</button>
-                <button class="key key-sci" data-action="function" data-value="ln">ln</button>
-            </div>
-            <div class="sci-row">
-                <button class="key key-sci" data-action="function" data-value="sqrt">√</button>
-                <button class="key key-sci" data-action="function" data-value="pow">x²</button>
-                <button class="key key-sci" data-action="function" data-value="cube">x³</button>
-                <button class="key key-sci" data-action="function" data-value="inv">1/x</button>
-                <button class="key key-sci" data-action="constant" data-value="pi">π</button>
-            </div>
-            <div class="sci-row">
-                <button class="key key-sci" data-action="bracket" data-value="(">(</button>
-                <button class="key key-sci" data-action="bracket" data-value=")">)</button>
-                <button class="key key-sci" data-action="function" data-value="fact">n!</button>
-                <button class="key key-sci" data-action="function" data-value="abs">|x|</button>
-                <button class="key key-sci" data-action="constant" data-value="e">e</button>
-            </div>
-        </div>
-
-        <!-- Input secreto (invisible) -->
+        <!-- Input secreto -->
         <input type="text" id="secret-input" class="secret-input" autocomplete="off">
     </div>
 
-    <!-- Modal del Chat Secreto -->
+    <!-- MODAL -->
     <div id="secret-modal" class="modal hidden">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>🔒 Canal Seguro Desbloqueado</h2>
                 <button class="modal-close" id="close-modal">&times;</button>
             </div>
+
             <div class="modal-body">
-                <!-- QR para móviles -->
+
+                <!-- QR -->
                 <div class="access-section">
-                    <h3 class="section-title">📱 Móvil / Tablet</h3>
-                    <div id="qr-container" class="qr-container">
-                        <canvas id="qr-code"></canvas>
-                        <p class="qr-info">Escaneá el código con tu cámara</p>
-                    </div>
+                    <h3>📱 Móvil / Tablet</h3>
+                    <canvas id="qr-code"></canvas>
                 </div>
 
-                <!-- Hipervínculo para PC -->
+                <!-- Link -->
                 <div class="access-section">
-                    <h3 class="section-title">💻 PC / Desktop</h3>
-                    <div class="link-container">
-                        <a id="chat-hyperlink" href="#" class="chat-hyperlink" target="_blank" rel="noopener">
-                            🔗 Abrir Chat Privado
-                        </a>
-                    </div>
-                    <div class="link-copy-section">
-                        <input type="text" id="chat-link" readonly placeholder="Link del chat...">
-                        <button id="copy-link" class="copy-btn">📋 Copiar</button>
-                    </div>
-                    <p class="hint-text">Clickeá el link o copialo para compartir</p>
+                    <h3>💻 PC / Desktop</h3>
+
+                    <a id="chat-hyperlink" href="#" target="_blank">🔗 Abrir Chat Privado</a>
+
+                    <input type="text" id="chat-link" readonly>
+                    <button id="copy-link">📋 Copiar</button>
                 </div>
 
-                <div class="divider"></div>
-
-                <button id="start-chat" class="start-chat-btn">
-                    🚀 Iniciar Chat en Esta Ventana
-                </button>
-
-                <div class="chat-info">
-                    <p class="warning-text">⏱️ El chat se cierra automáticamente después de 30 min de inactividad</p>
-                    <p class="warning-text">🔒 No guarda ningún registro - todo es temporal</p>
-                </div>
+                <button id="start-chat">🚀 Iniciar Chat</button>
             </div>
         </div>
     </div>
 
-    <!-- Ventana de Chat -->
+    <!-- CHAT -->
     <div id="chat-window" class="chat-window hidden">
-        <div class="chat-header">
-            <span class="chat-title">💬 Chat Privado</span>
-            <span class="chat-timer" id="inactivity-timer">30:00</span>
-            <button class="chat-close" id="close-chat">✕</button>
-        </div>
-        <div class="chat-messages" id="chat-messages">
-            <div class="system-message">
-                <p>🔒 Conexión segura establecida</p>
-                <p class="warning">⚠️ Este chat no guarda registros y se autodestruirá tras 30 min de inactividad</p>
-            </div>
-        </div>
-        <div class="chat-input-area">
-            <label class="attach-btn" title="Adjuntar archivo">
-                📎
-                <input type="file" id="file-input" hidden multiple accept="image/*,.pdf,.doc,.docx,.txt,.zip">
-            </label>
-            <label class="attach-btn" title="Tomar foto">
-                📷
-                <input type="file" id="camera-input" hidden accept="image/*" capture="environment">
-            </label>
-            <input type="text" id="message-input" placeholder="Escribí tu mensaje..." autocomplete="off">
-            <button id="send-message" class="send-btn">➤</button>
-        </div>
+        <div id="chat-messages"></div>
+
+        <input type="text" id="message-input">
+        <button id="send-message">➤</button>
     </div>
 
-    <!-- Toast notifications -->
+    <!-- Toast -->
     <div id="toast" class="toast hidden"></div>
 
-    <!-- Configuración (cargar primero) -->
-    <script src="js/config.js"></script>
-    <script src="js/calculator.js"></script>
-    <script src="js/chat.js"></script>
 </body>
 </html>
