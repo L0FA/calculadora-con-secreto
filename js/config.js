@@ -9,7 +9,7 @@
 // URL del servidor backend (Node.js + Socket.io)
 // En desarrollo local: null (usa localhost:3000 automáticamente)
 // En producción: poné la URL de tu servidor (ej: 'https://tu-app.onrender.com')
-const BACKEND_URL = null;
+const BACKEND_URL = "https://calculadora-con-secreto.onrender.com";
 
 // Si querés configurar la URL desde aquí, descomentá la siguiente línea y poné tu URL:
 // const BACKEND_URL = 'https://tu-backend.onrender.com';
