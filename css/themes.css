@@ -1,0 +1,576 @@
+/* ==================== TEMA 1: DEFAULT (Gradiente Púrpura) ==================== */
+.theme-default {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.theme-default .display-container {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.theme-default .key-number {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.theme-default .key-equals {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* ==================== TEMA 2: DARK (Negro Elegante) ==================== */
+.theme-dark {
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+}
+
+.theme-dark .display-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .key-number {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e0e0e0;
+}
+
+.theme-dark .key-operator {
+    background: rgba(99, 102, 241, 0.3);
+    color: #a5b4fc;
+}
+
+.theme-dark .key-function {
+    background: rgba(255, 255, 255, 0.05);
+    color: #9ca3af;
+}
+
+.theme-dark .key-equals {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.theme-dark .theme-btn {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== TEMA 3: NEON (Cyber Neon) ==================== */
+.theme-neon {
+    background: #0a0a0a;
+}
+
+.theme-neon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 136, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.theme-neon .display-container {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.theme-neon .display {
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.theme-neon .key-number {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.theme-neon .key-number:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.theme-neon .key-operator {
+    background: rgba(255, 0, 255, 0.15);
+    color: #ff00ff;
+    border: 1px solid rgba(255, 0, 255, 0.3);
+}
+
+.theme-neon .key-operator:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+.theme-neon .key-function {
+    background: rgba(0, 136, 255, 0.1);
+    color: #0088ff;
+}
+
+.theme-neon .key-equals {
+    background: linear-gradient(135deg, #00ff88 0%, #0088ff 100%);
+    color: #000;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+/* ==================== TEMA 4: MINIMAL (Blanco Puro) ==================== */
+.theme-minimal {
+    background: #fafafa;
+}
+
+.theme-minimal .display-container {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.theme-minimal .display {
+    color: #1a1a1a;
+}
+
+.theme-minimal .display-history {
+    color: #9ca3af;
+}
+
+.theme-minimal .key-number {
+    background: #f3f4f6;
+    color: #1a1a1a;
+}
+
+.theme-minimal .key-number:hover {
+    background: #e5e7eb;
+}
+
+.theme-minimal .key-operator {
+    background: #e5e7eb;
+    color: #4b5563;
+}
+
+.theme-minimal .key-function {
+    background: #f9fafb;
+    color: #6b7280;
+}
+
+.theme-minimal .key-equals {
+    background: #1a1a1a;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-minimal .theme-btn {
+    background: #f3f4f6;
+}
+
+.theme-minimal .mode-btn {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.theme-minimal #mode-indicator {
+    color: #9ca3af;
+}
+
+/* ==================== TEMA 5: RETRO (Vintage TV) ==================== */
+.theme-retro {
+    background: linear-gradient(180deg, #2d1b4e 0%, #1a1033 100%);
+}
+
+.theme-retro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.theme-retro .display-container {
+    background: #0a0520;
+    border: 4px solid #4a2c7a;
+    border-radius: 8px;
+    box-shadow: inset 0 0 30px rgba(74, 44, 122, 0.5), 0 0 20px rgba(138, 92, 200, 0.3);
+}
+
+.theme-retro .display {
+    color: #b8ff57;
+    text-shadow: 0 0 10px rgba(184, 255, 87, 0.8);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.theme-retro .key-number {
+    background: linear-gradient(180deg, #4a2c7a 0%, #2d1b4e 100%);
+    color: #e0c3fc;
+    border: 2px solid #6b3fa0;
+    border-radius: 8px;
+}
+
+.theme-retro .key-operator {
+    background: linear-gradient(180deg, #6b3fa0 0%, #4a2c7a 100%);
+    color: #b8ff57;
+}
+
+.theme-retro .key-function {
+    background: linear-gradient(180deg, #2d1b4e 0%, #1a1033 100%);
+    color: #8b5cf6;
+}
+
+.theme-retro .key-equals {
+    background: linear-gradient(180deg, #b8ff57 0%, #7cb342 100%);
+    color: #1a1033;
+    border: 2px solid #b8ff57;
+}
+
+/* ==================== TEMA 6: NATURE (Verde Naturaleza) ==================== */
+.theme-nature {
+    background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+}
+
+.theme-nature .display-container {
+    background: rgba(19, 78, 94, 0.4);
+    border: 1px solid rgba(113, 178, 128, 0.3);
+}
+
+.theme-nature .key-number {
+    background: rgba(113, 178, 128, 0.25);
+    color: #e8f5e9;
+}
+
+.theme-nature .key-operator {
+    background: rgba(76, 175, 80, 0.35);
+    color: #a5d6a7;
+}
+
+.theme-nature .key-function {
+    background: rgba(19, 78, 94, 0.3);
+    color: #80cbc4;
+}
+
+.theme-nature .key-equals {
+    background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+    box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* ==================== TEMA 7: OCEAN (Azul Océano) ==================== */
+.theme-ocean {
+    background: linear-gradient(180deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+}
+
+.theme-ocean::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(0, 50, 100, 0.5) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.theme-ocean .display-container {
+    background: rgba(0, 30, 60, 0.5);
+    border: 1px solid rgba(100, 180, 255, 0.2);
+}
+
+.theme-ocean .display {
+    color: #64b5f6;
+}
+
+.theme-ocean .key-number {
+    background: rgba(100, 181, 246, 0.15);
+    color: #bbdefb;
+}
+
+.theme-ocean .key-operator {
+    background: rgba(33, 150, 243, 0.3);
+    color: #90caf9;
+}
+
+.theme-ocean .key-function {
+    background: rgba(0, 30, 60, 0.4);
+    color: #4fc3f7;
+}
+
+.theme-ocean .key-equals {
+    background: linear-gradient(135deg, #0288d1 0%, #4fc3f7 100%);
+    box-shadow: 0 4px 20px rgba(33, 150, 243, 0.4);
+}
+
+/* ==================== TEMA 8: SUNSET (Atardecer Naranja) ==================== */
+.theme-sunset {
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #ff9ff3 100%);
+}
+
+.theme-sunset .display-container {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.theme-sunset .display {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-sunset .key-number {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.theme-sunset .key-operator {
+    background: rgba(255, 107, 107, 0.4);
+    color: white;
+}
+
+.theme-sunset .key-function {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.theme-sunset .key-equals {
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+    color: white;
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* ==================== TEMA 9: GALAXY (Espacio Profundo) ==================== */
+.theme-galaxy {
+    background: #000000;
+}
+
+.theme-galaxy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(75, 0, 130, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(25, 25, 112, 0.2) 0%, transparent 40%);
+    pointer-events: none;
+    animation: galaxyPulse 10s ease infinite;
+}
+
+@keyframes galaxyPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.theme-galaxy .display-container {
+    background: rgba(138, 43, 226, 0.1);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.2);
+}
+
+.theme-galaxy .display {
+    color: #e6e6fa;
+    text-shadow: 0 0 15px rgba(230, 230, 250, 0.5);
+}
+
+.theme-galaxy .key-number {
+    background: rgba(75, 0, 130, 0.25);
+    color: #dda0dd;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.theme-galaxy .key-operator {
+    background: rgba(138, 43, 226, 0.35);
+    color: #e6e6fa;
+}
+
+.theme-galaxy .key-function {
+    background: rgba(25, 25, 112, 0.3);
+    color: #9370db;
+}
+
+.theme-galaxy .key-equals {
+    background: linear-gradient(135deg, #8b008b 0%, #4b0082 100%);
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+}
+
+/* ==================== TEMA 10: CYBERPUNK ==================== */
+.theme-cyberpunk {
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+}
+
+.theme-cyberpunk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0080, #00ffff, #ff0080);
+    animation: cyberline 3s linear infinite;
+}
+
+.theme-cyberpunk::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00ffff, #ff0080, #00ffff);
+    animation: cyberline 3s linear infinite reverse;
+}
+
+@keyframes cyberline {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.theme-cyberpunk .display-container {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), inset 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.theme-cyberpunk .display {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.theme-cyberpunk .key-number {
+    background: rgba(255, 0, 128, 0.1);
+    color: #ff0080;
+    border: 1px solid rgba(255, 0, 128, 0.4);
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.theme-cyberpunk .key-operator {
+    background: rgba(0, 255, 255, 0.15);
+    color: #00ffff;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+
+.theme-cyberpunk .key-function {
+    background: rgba(255, 0, 128, 0.05);
+    color: #ff0080;
+}
+
+.theme-cyberpunk .key-equals {
+    background: linear-gradient(135deg, #ff0080 0%, #00ffff 100%);
+    color: #000;
+    font-weight: 700;
+    box-shadow: 0 0 25px rgba(255, 0, 128, 0.5);
+    clip-path: none;
+}
+
+/* ==================== TEMA 11: PASTEL (Colores Suaves) ==================== */
+.theme-pastel {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.theme-pastel .display-container {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid #ffcdd2;
+}
+
+.theme-pastel .display {
+    color: #6d4c41;
+}
+
+.theme-pastel .display-history {
+    color: #a1887f;
+}
+
+.theme-pastel .key-number {
+    background: #fff5f5;
+    color: #5d4037;
+    border: 1px solid #ffcdd2;
+}
+
+.theme-pastel .key-number:hover {
+    background: #ffe0e0;
+}
+
+.theme-pastel .key-operator {
+    background: #e1bee7;
+    color: #6a1b9a;
+}
+
+.theme-pastel .key-function {
+    background: #b2dfdb;
+    color: #00695c;
+}
+
+.theme-pastel .key-equals {
+    background: linear-gradient(135deg, #f48fb1 0%, #ce93d8 100%);
+    color: white;
+}
+
+.theme-pastel .theme-btn {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ==================== TEMA 12: GLASS (Glassmorphism) ==================== */
+.theme-glass {
+    background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+}
+
+.theme-glass::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+    animation: glassRotate 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes glassRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.theme-glass .display-container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.theme-glass .key-number {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.theme-glass .key-operator {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.theme-glass .key-function {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.theme-glass .key-equals {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+}
+
+.theme-glass .theme-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
